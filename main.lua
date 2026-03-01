@@ -14,7 +14,7 @@ local WebhookFileURL = "https://raw.githubusercontent.com/poclol/Sandy/refs/head
 
 local Script = "Get Moon Stand for free at discord.gg/mfyCBWWExF"
 
-local Owner = "Xrshino"
+local Owner = "BerthaHilton"
 local BlackScreen = false
 local DisableRendering = false
 local FPSCap = 60
