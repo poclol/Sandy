@@ -132,6 +132,20 @@ local gunData = {
     },
 }
 
+-- Debug: Check if shop exists
+task.spawn(function()
+    task.wait(5)
+    local shop = workspace:FindFirstChild("Ignored") and workspace.Ignored:FindFirstChild("Shop")
+    if shop then
+        print("Shop found!")
+        for _, v in pairs(shop:GetChildren()) do
+            print("Shop item:", v.Name)
+        end
+    else
+        print("Shop NOT found! Check workspace structure")
+    end
+end)
+
 local RunService = game:GetService("RunService")
 
 if DisableRendering then
@@ -1611,8 +1625,8 @@ task.spawn(function()
                 if isKO and trashtalkactive then
                     if not hasSentKOMessage then
                         sendMessage("Get SANDY g g / fJeSNdJr4D")
-                        sendMessage("HAHAHA NOON")
-                        sendMessage("SANDY dominated YOU!")
+                        sendMessage("HAHAHA NOOB")
+                        sendMessage("SANDY BEAT YOU HAHA!")
                         hasSentKOMessage = true
                     end
                 else
