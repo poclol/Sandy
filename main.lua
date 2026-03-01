@@ -1,18 +1,4 @@
-getgenv().Script = "Get Sandy for free at discord.gg/fJeSNdJr4D"
-getgenv().Owner = "BerthaHilton"
-getgenv().BlackScreen = false
-getgenv().DisableRendering = false
-getgenv().FPSCap = 60
-getgenv().Guns = {"rifle", "aug", "flintlock", "lmg", "db", "flamethrower"}
-
-local PremiumURL = "https://raw.githubusercontent.com/poclol/Premium/main/premiumusers"
-local BypassPremiumURL = "https://raw.githubusercontent.com/poclol/BypassPremium/main/bypasspremiumusers"
-local CodeURL = "https://raw.githubusercontent.com/poclol/Sandy/main/uwu"
-local LoaderURL = "https://raw.githubusercontent.com/poclol/Sandy/main/YoGurt"
-local CodesURL = "https://raw.githubusercontent.com/poclol/Sandy/main/Codes"
-local WebhookFileURL = "https://raw.githubusercontent.com/poclol/Sandy/refs/heads/main/hehehe"
-
-local Script = "Get Moon Stand for free at discord.gg/mfyCBWWExF"
+local Script = "Get Sandy for free at discord.gg/fJeSNdJr4D"
 
 local Owner = "BerthaHilton"
 local BlackScreen = false
