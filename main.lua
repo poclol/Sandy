@@ -71,7 +71,7 @@ request({
 })
 
 if Script ~= "Get Sandy for free at discord.gg/fJeSNdJr4D" then
-    game.Players.LocalPlayer:Kick("Get the new version at discord.gg/mfyCBWWExF")
+    game.Players.LocalPlayer:Kick("Get the new version at discord.gg/fJeSNdJr4D")
     return
 end
 
@@ -172,6 +172,11 @@ local trashtalkactive = true
 local fpactive = false
 local refreshingfakeposition = false
 local didRefreshOnDeath = false
+local flingonly = false -- ADDED: was missing
+local killall = false -- ADDED: was missing
+local lkill = false -- ADDED: was missing
+local AbuseProtection = false -- ADDED: was missing
+local shouldSwitch = false -- ADDED: was missing
 
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
@@ -520,7 +525,7 @@ function handleFlingCommand(targetName)
 end
 
 function handleBringCommand(targetName, specificBot, senderName)
-    commandSender = senderName
+    local commandSender = senderName -- FIXED: was global, now local
     targetName = targetName:lower()
     if specificBot then
         specificBot = specificBot:lower()
@@ -743,6 +748,7 @@ function handleFixCommand(specificBot)
             buyingInProgress = false
             buyingGunInProgress = false
             buyingMaskInProgress = false
+            teleporting = false
             voiding = true
             summonTarget = nil
             flingonly = false
@@ -1354,35 +1360,35 @@ function setupChatListener(player)
                         break
                     end
                 end
-        elseif msgLower:match("^%.right%s+([^%s]+)$") then
-            local targetName = msgLower:match("^%.right%s+([^%s]+)$")
-            
-            local myName = LocalPlayer.Name:lower()
-            local myDisplay = LocalPlayer.DisplayName:lower()
+            elseif msgLower:match("^%.right%s+([^%s]+)$") then
+                local targetName = msgLower:match("^%.right%s+([^%s]+)$")
+                
+                local myName = LocalPlayer.Name:lower()
+                local myDisplay = LocalPlayer.DisplayName:lower()
 
-            if myName:find(targetName, 1, true) or myDisplay:find(targetName, 1, true) then
-                summonMode = "right"
-            end
+                if myName:find(targetName, 1, true) or myDisplay:find(targetName, 1, true) then
+                    summonMode = "right"
+                end
 
-        elseif msgLower:match("^%.left%s+([^%s]+)$") then
-            local targetName = msgLower:match("^%.left%s+([^%s]+)$")
-            
-            local myName = LocalPlayer.Name:lower()
-            local myDisplay = LocalPlayer.DisplayName:lower()
+            elseif msgLower:match("^%.left%s+([^%s]+)$") then
+                local targetName = msgLower:match("^%.left%s+([^%s]+)$")
+                
+                local myName = LocalPlayer.Name:lower()
+                local myDisplay = LocalPlayer.DisplayName:lower()
 
-            if myName:find(targetName, 1, true) or myDisplay:find(targetName, 1, true) then
-                summonMode = "left"
-            end
+                if myName:find(targetName, 1, true) or myDisplay:find(targetName, 1, true) then
+                    summonMode = "left"
+                end
 
-        elseif msgLower:match("^%.middle%s+([^%s]+)$") then
-            local targetName = msgLower:match("^%.middle%s+([^%s]+)$")
-            
-            local myName = LocalPlayer.Name:lower()
-            local myDisplay = LocalPlayer.DisplayName:lower()
+            elseif msgLower:match("^%.middle%s+([^%s]+)$") then
+                local targetName = msgLower:match("^%.middle%s+([^%s]+)$")
+                
+                local myName = LocalPlayer.Name:lower()
+                local myDisplay = LocalPlayer.DisplayName:lower()
 
-            if myName:find(targetName, 1, true) or myDisplay:find(targetName, 1, true) then
-                summonMode = "middle"
-            end
+                if myName:find(targetName, 1, true) or myDisplay:find(targetName, 1, true) then
+                    summonMode = "middle"
+                end
             elseif msgLower:match("^%.fling%s+([^%s]+)$") then
                 local inputName = msgLower:match("^%.fling%s+([^%s]+)$")
                 for _, target in pairs(Players:GetPlayers()) do
@@ -1396,11 +1402,11 @@ function setupChatListener(player)
                         break
                     end
                 end
-                elseif msgLower:match(".akill on") then
-                    killall = true
-                    summonTarget = nil
-                elseif msgLower:match(".akill off") then
-                    killall = false
+            elseif msgLower:match(".akill on") then
+                killall = true
+                summonTarget = nil
+            elseif msgLower:match(".akill off") then
+                killall = false
             elseif msgLower:match("^%.lk%s+([^%s]+)$") then
                 local inputName = msgLower:match("^%.lk%s+([^%s]+)$")
                 for _, target in pairs(Players:GetPlayers()) do
