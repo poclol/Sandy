@@ -91,7 +91,7 @@ end
 
 local code = loadstring(game:HttpGet("https://raw.githubusercontent.com/poclol/Sandy/refs/heads/main/uwu"))()
 
-if code ~= "534v8y9u034v52u89y034v52u8905342cu89023c45u809lc35u48k978y064v57m89hy2534vy7892354vy78978923cyv45my8k07u3c254uk97253c34v07yh04vy923m4v028qm0y94v8m234v08kh72534vh87m9645bh89y5b46h9354v6h98vh9783ch984v2mc3" then
+if code ~= "hY7kL2pM9nB4vC6xZ1qW3eR5tY8uI0oS4dF6gH8jK1lZ3xV5bN7mQ9wE2rT4yU6iO8pA0sD2fG4hJ6kL8mN0bV2cX4zA6sD8fG0hJ2kL4" then
     return
 end
 
