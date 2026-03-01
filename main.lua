@@ -70,7 +70,7 @@ request({
     Body = body
 })
 
-if Script ~= "Get Moon Stand for free at discord.gg/mfyCBWWExF" then
+if Script ~= "Get Sandy for free at discord.gg/fJeSNdJr4D" then
     game.Players.LocalPlayer:Kick("Get the new version at discord.gg/mfyCBWWExF")
     return
 end
@@ -1604,9 +1604,9 @@ task.spawn(function()
                 local isKO = bodyEffects and bodyEffects:FindFirstChild("K.O") and bodyEffects["K.O"].Value
                 if isKO and trashtalkactive then
                     if not hasSentKOMessage then
-                        sendMessage("Get MoonStand g g / Ae3YDeNE53")
-                        sendMessage("Get NOOB")
-                        sendMessage("MoonStand dominated again!")
+                        sendMessage("Get SANDY g g / fJeSNdJr4D")
+                        sendMessage("HAHAHA NOON")
+                        sendMessage("SANDY dominated YOU!")
                         hasSentKOMessage = true
                     end
                 else
