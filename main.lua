@@ -112,23 +112,23 @@ local currentGunIndex = 1
 local gunData = {
     rifle = {
         toolName = "[Rifle]",
-        shopName = "[Rifle]"
+        shopName = "[Rifle] - $1694"
     },
     aug = {
         toolName = "[AUG]",
-        shopName = "[AUG]"
+        shopName = "[AUG] - $2131"
     },
     flintlock = {
         toolName = "[Flintlock]",
-        shopName = "[Flintlock]"
+        shopName = "[Flintlock] - $1421"
     },
     lmg = {
         toolName = "[LMG]",
-        shopName = "[LMG]"
+        shopName = "[LMG] - $4098"
     },
     db = {
         toolName = "[Double-Barrel SG]",
-        shopName = "[Double-Barrel SG]"
+        shopName = "[Double-Barrel SG] - $1475"
     },
 }
 
