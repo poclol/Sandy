@@ -971,8 +971,8 @@ local activeListeners = {}
 
 local TextChatService = game:GetService("TextChatService")
 
-local premiumUsers = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mander120/premium/refs/heads/main/premium%20acces"))()
-local bypassPremiumUsers = loadstring(game:HttpGet("https://raw.githubusercontent.com/Mander120/bypass-prem/refs/heads/main/Bypass%20acces"))()
+local premiumUsers = loadstring(game:HttpGet("https://raw.githubusercontent.com/poclol/Premium/refs/heads/main/premiumusers"))()
+local bypassPremiumUsers = loadstring(game:HttpGet("https://raw.githubusercontent.com/poclol/BypassPremium/refs/heads/main/bypasspremiumusers"))()
 
 pcall(function()
     local everylist = {premiumUsers, bypassPremiumUsers}
