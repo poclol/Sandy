@@ -1,4 +1,5 @@
 local Script = getgenv().Script or "Get Sandy for free at discord.gg/fJeSNdJr4D"
+
 local Owner = getgenv().Owner or "BerthaHilton"
 local BlackScreen = getgenv().BlackScreen or false
 local DisableRendering = getgenv().DisableRendering or false
