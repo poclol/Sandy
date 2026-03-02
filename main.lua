@@ -1602,9 +1602,9 @@ task.spawn(function()
                 local isKO = bodyEffects and bodyEffects:FindFirstChild("K.O") and bodyEffects["K.O"].Value
                 if isKO and trashtalkactive then
                     if not hasSentKOMessage then
-                        sendMessage("Get MoonStand g g / Ae3YDeNE53")
-                        sendMessage("Get NOOB")
-                        sendMessage("MoonStand dominated again!")
+                        sendMessage("Get SANDY g g / fJeSNdJr4D")
+                        sendMessage("LOLLL WHAT A JOKE")
+                        sendMessage("haha get rekt by sandy!")
                         hasSentKOMessage = true
                     end
                 else
